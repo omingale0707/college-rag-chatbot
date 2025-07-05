@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College RAG Chatbot</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="logo-section">
+                    <img src="static/download.png" alt="College Logo" class="logo-image">
+                    <h1 class="project-title">College RAG Chatbot</h1>
+                    <div class="subtitle">Intelligent Information Assistant</div>
+                </div>
+                
+                <div class="description-card">
+                    <p class="description">
+                        Welcome to our advanced College Information System powered by Retrieval-Augmented Generation (RAG) technology. 
+                        This intelligent chatbot provides instant, accurate answers to all your college-related queries by accessing 
+                        our comprehensive knowledge base of institutional documents, policies, and resources.
+                    </p>
+                    
+                    <div class="features">
+                        <div class="feature-item">
+                            <div class="feature-icon">📚</div>
+                            <span>Academic Information</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🏛️</div>
+                            <span>College Policies</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📋</div>
+                            <span>Administrative Procedures</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <span>Quick Assistance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-section">
+                    <button class="chat-button" onclick="startChat()">
+                        <span>Start Chatting</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                    
+                    <p class="help-text">Get instant answers to your college-related questions</p>
+                </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 College RAG Chatbot. Powered by AI Technology.</p>
+        </div>
+    </div>
+
+    <script>
+        function startChat() {
+            // Add a smooth transition effect
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                window.location.href = '/chatting'; // Update this URL to match your chat route
+            }, 300);
+        }
+        
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingCards = document.querySelectorAll('.floating-card');
+            
+            floatingCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.5}s`;
+            });
+        });
+    </script>
+</body>
+</html>
