@@ -12,7 +12,7 @@ contact: "academics@kirticollege.edu.in"
 
 # List of Programs - Kirti College
 
-## Undergraduate Programs (3-Year Duration)
+## Undergraduate/Bachelors Programs (3-Year Duration)
 
 ### Science Stream
 | Program | Seats | Affiliation | Mode |
@@ -40,7 +40,7 @@ contact: "academics@kirticollege.edu.in"
 | B.Com. (Investment Management) | 60 | University of Mumbai | Full-time |
 | BMS (Bachelor of Management Studies) | 120 | University of Mumbai | Full-time |
 
-## Postgraduate Programs (2-Year Duration)
+## Postgraduate/Masters Programs (2-Year Duration)
 
 ### Science Stream
 | Program | Seats | Affiliation | Mode |

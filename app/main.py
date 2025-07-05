@@ -48,7 +48,7 @@ def send_to_chat():
 
 @app.get("/chatting", response_class = HTMLResponse)
 def return_homepage(request: Request):
-    return templates.TemplateResponse(request = request, name = "chatting2.html")
+    return templates.TemplateResponse(request = request, name = "chatting.html")
 
 @app.websocket("/chatting")
 async def websocket_chat(websocket: WebSocket):
@@ -61,7 +61,9 @@ async def websocket_chat(websocket: WebSocket):
         index_params={"index_type": "FLAT", "metric_type": "L2"},
         auto_id=True
     )
-    retriever = vector_store.as_retriever()
+    retriever = vector_store.as_retriever(
+        search_type="similarity", search_kwargs={"k":5}
+    )
 
     history_aware_retriever = build_history_aware_retriever(llm, retriever)
     qa_chain = build_qa_chain(llm)

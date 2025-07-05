@@ -23,16 +23,16 @@ logging.basicConfig(
 zip_path = "kirti_college_knowledge_base.zip"
 extract_path = "data"
 
-logging.info(f'Starting extracting contents from {zip_path}')
-with ZipFile(zip_path, 'r') as zip_ref:
-    # print(zip_ref.infolist())
-    for zip_info in zip_ref.infolist():
-       if zip_info.is_dir():
-          continue
+# logging.info(f'Starting extracting contents from {zip_path}')
+# with ZipFile(zip_path, 'r') as zip_ref:
+#     # print(zip_ref.infolist())
+#     for zip_info in zip_ref.infolist():
+#        if zip_info.is_dir():
+#           continue
        
-       zip_info.filename = zip_info.filename.removeprefix(f"{zip_path[:zip_path.find('.')]}/")
-       zip_ref.extract(zip_info, extract_path)
-    logging.info(f'Completed extracting contents from {zip_path} to folder {extract_path}')
+#        zip_info.filename = zip_info.filename.removeprefix(f"{zip_path[:zip_path.find('.')]}/")
+#        zip_ref.extract(zip_info, extract_path)
+#     logging.info(f'Completed extracting contents from {zip_path} to folder {extract_path}')
 
 length_function = len
 
